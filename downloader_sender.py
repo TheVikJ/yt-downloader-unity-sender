@@ -70,7 +70,11 @@ def _build_dl(out_dir: Path, cookies: Path | None) -> yt_dlp.YoutubeDL:
         "noplaylist": True,
         "quiet": False,
         "no_warnings": True,
-        "ignoreerrors": True,
+        "ignoreerrors": False,
+		"ignore_no_formats_error": False,
+		"quiet": False,
+		"no_warnings": False,
+		"verbose": True,
         "outtmpl": str(out_dir / "%(id)s.%(ext)s"),
         "postprocessors": [{
             "key": "FFmpegExtractAudio",
@@ -134,6 +138,7 @@ def main() -> None:
     ydl = _build_dl(args.out_dir, args.cookies)
 
     # load checkpoint of collected IDs
+	print("Loading checkpoint of collected IDs\n")
     collected_ids = set()
     if COLLECTED_IDS_FILE.exists():
         collected_ids.update(l.strip() for l in COLLECTED_IDS_FILE.read_text().splitlines() if l.strip())
