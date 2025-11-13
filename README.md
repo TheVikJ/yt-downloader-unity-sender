@@ -22,7 +22,7 @@ Note: On Unity you should create a `scratch space`, which can store very large c
 
 Activate your virtual environment:
 
-`source yt-dlp-end/bin/activate`
+`source yt-dlp-env/bin/activate`
 
 2. Run the Combined Downloader + Sender
 
