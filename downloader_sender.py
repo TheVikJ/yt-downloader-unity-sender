@@ -138,7 +138,6 @@ def main() -> None:
     ydl = _build_dl(args.out_dir, args.cookies)
 
     # load checkpoint of collected IDs
-	print("Loading checkpoint of collected IDs\n")
     collected_ids = set()
     if COLLECTED_IDS_FILE.exists():
         collected_ids.update(l.strip() for l in COLLECTED_IDS_FILE.read_text().splitlines() if l.strip())
