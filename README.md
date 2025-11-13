@@ -80,6 +80,8 @@ If you refresh cookies, rerun the same command—it won’t redo successful down
 
 You only need one tmux session now, since the script downloads and sends automatically.
 
+11/12/2025: YouTube Change: YouTube has started enforcing SABR streaming (server-assisted byte-range) for the "web" client — a known breaking change discussed in this GitHub issue: [https://github.com/yt-dlp/yt-dlp/issues/12482](https://github.com/yt-dlp/yt-dlp/issues/12482). Therefore, yt-dlp’s "web" client can now only see thumbnails and metadata, not media URLs. The fix is to use a different client, such as "android" or "tv_embedded". 
+
 # Replacing cookies
 Before:
 1. Open a google window non-incognito. Yes, we will need google chrome to use its extensions.
