@@ -15,7 +15,7 @@ import innertube
 COLLECTED_IDS_FILE = Path("collected_ids.txt")
 
 # =================== Config for rsync =====================
-RSYNC_DEST = "unity://scratch3/workspace/oyilmazel_umass_edu-yt-lang-detect/wavs/"
+RSYNC_DEST = "unity:///scratch4/workspace/vjaisingh_umass_edu-yt-lang-detect/wavs"
 RSYNC_CMD = [
     "rsync",
     "-avP", "--partial", "--info=progress2", "--bwlimit=20000",
