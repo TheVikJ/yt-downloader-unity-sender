@@ -14,6 +14,8 @@ import innertube
 
 COLLECTED_IDS_FILE = Path("collected_ids.txt")
 
+DENO_PATH = Path("../.deno")
+
 # =================== Config for rsync =====================
 RSYNC_DEST = "unity:///scratch4/workspace/vjaisingh_umass_edu-yt-lang-detect/wavs"
 RSYNC_CMD = [
@@ -85,6 +87,7 @@ def _build_dl(out_dir: Path, cookies: Path | None) -> yt_dlp.YoutubeDL:
 	"live_from_start": False,
         "ignore_no_formats_error": True,
         "extractor_args": {"youtube": {"player_client": ["web"]}},
+		"js_runtimes": {"deno": str(DENO_PATH)},
     }
     if cookies:
         opts["cookiefile"] = str(cookies)
