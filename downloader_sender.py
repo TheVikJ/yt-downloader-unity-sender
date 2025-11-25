@@ -86,7 +86,7 @@ def _build_dl(out_dir: Path, cookies: Path | None) -> yt_dlp.YoutubeDL:
         "match_filter": match_filter_func("!is_live"),
 	"live_from_start": False,
         "ignore_no_formats_error": True,
-        "extractor_args": {"youtube": {"player_client": ["web"]}},
+        "extractor_args": {"youtube": {"player_client": ["ios", "android", "tv"]}},
 		"js_runtimes": {"deno": str(DENO_PATH)},
     }
     if cookies:
