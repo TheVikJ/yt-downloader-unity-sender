@@ -14,7 +14,7 @@ import innertube
 
 COLLECTED_IDS_FILE = Path("collected_ids.txt")
 
-DENO_PATH = Path("../.deno")
+DENO_PATH = Path.home() / ".deno" / "bin" / "deno"
 
 # =================== Config for rsync =====================
 RSYNC_DEST = "unity:///scratch4/workspace/vjaisingh_umass_edu-yt-lang-detect/wavs"
